@@ -46,4 +46,11 @@ public class MovieController {
         movieService.deleteAllDirectorsMovies(director);
         return new ResponseEntity<>("All movies by the director deleted successfully", HttpStatus.OK);
     }
+
+    @PostMapping("/add-director")
+    public ResponseEntity<String> addDirector(@RequestBody Director director) {
+        movieService.addDirector(director);
+        return new ResponseEntity<>("Director added successfully", HttpStatus.CREATED);
+    }
+
 }

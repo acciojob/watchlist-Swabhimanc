@@ -7,6 +7,7 @@ import java.util.*;
 @Repository
 public class MovieRepository {
     private Map<String, Movie> movieMap = new HashMap<>();
+    private List<Director> directorList = new ArrayList<>();
 
     public void addMovie(Movie movie) {
         movieMap.put(movie.getName(), movie);
@@ -33,5 +34,8 @@ public class MovieRepository {
     public void deleteMovie(Movie movie) {
         movieMap.remove(movie.getName());
     }
-}
 
+    public void addDirector(Director director) {
+        directorList.add(director);
+    }
+}

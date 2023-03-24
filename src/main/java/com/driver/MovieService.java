@@ -29,5 +29,10 @@ public class MovieService {
     public void deleteMovie(Movie movie) {
         movieRepository.deleteMovie(movie);
     }
+
+    public void addDirector(Director director) {
+        movieRepository.addDirector(director);
+    }
+
 }
 
